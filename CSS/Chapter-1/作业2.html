@@ -4,57 +4,55 @@
     <meta charset="UTF-8">
     <title></title>
     <style type="text/css">
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             font-family: "宋体";
         }
 
+        .wrap {
+            margin: 45px auto;
+            width: 378px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #d4d0c8 #404040 #404040 #d4d0c8;
+        }
+
         .alert {
-            width: 376px;
-            height: 82px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #ffffff #808080 #808080 #ffffff;
             background-color: #d4d0c8;
             padding: 1px;
+        }
 
-            margin: 45px auto auto;
+        .alert-header {
+            background: #0f296e url(img/title_bg.png) repeat-y;
         }
 
         .alert-title {
-            width: 374px;
-            height: 18px;
-            line-height: 18px;
-            background-image: url(img/title-bg.png);
-            background-repeat: repeat-y;
-            font-size: 8px;
+            margin: 0;
+            padding-left: 2px;
+            font: bold 10px/18px '宋体';
             color: #ffffff;
-            padding: 0 2px;
         }
 
         .alert-body {
-            width: 100%;
-            height: 64px;
-            padding: 11px 10px;
-            position: relative;
-        }
-
-        .alert-desc {
-            font-size: 12px;
-            margin-left: 16px;
-            position: absolute;
-            width: 222px;
+            font: 12px/14px '宋体';
+            color: #000;
+            padding: 12px 95px 21px 57px;
+            background: url(./img/body_bg.gif) no-repeat 11px 10px;
         }
     </style>
 </head>
 <body>
-<div class="alert">
-    <div class="alert-title">
-        Adobe Photoshop CS4 Extended
+    <div class="wrap">
+        <div class="alert">
+            <div class="alert-header">
+                <h3 class="alert-title">Adobe Photoshop CS4 Extended</h3>
+            </div>
+            <div class="alert-body">
+                要在关闭之前存储对 Adobe Photoshop 文档“未标题-1”的更改？
+            </div>
+        </div>
     </div>
-    <div class="alert-body">
-        <img src="img/warn.png"/><span class="alert-desc">要在关闭之前存储对 Adobe Photoshop 文档“未标题-1”的更改？</span>
-    </div>
-</div>
 </body>
 </html>
