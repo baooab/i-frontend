@@ -1,0 +1,108 @@
+.nav {
+    margin: 45px auto;
+
+    width: 230px;
+    border: 1px solid #eee;
+}
+
+.nav-item {
+    font: 11px/40px 'microfost yahei';
+    text-decoration: none;
+    color: #595959;
+    display: block;
+    padding-left: 50px;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: #e45e60;
+}
+
+.nav-item.peripheral {
+    background: url(../../images/work1/peripheral_ico.gif) no-repeat 13px 10px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 200px 14px;
+}
+
+.nav-item.peripheral:hover {
+    background: url(../../images/work1/peripheral_ico.gif) no-repeat 13px 10px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 210px 14px;
+}
+
+.nav-item.digital {
+    background: url(../../images/work1/digital_ico.gif) no-repeat 10px 14px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 200px 14px;
+}
+
+.nav-item.digital:hover {
+    background: url(../../images/work1/digital_ico.gif) no-repeat 10px 14px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 210px 14px;
+}
+
+.nav-item.life {
+    background: url(../../images/work1/life_ico.gif) no-repeat 13px 11px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 200px 14px;
+}
+
+.nav-item.life:hover {
+    background: url(../../images/work1/life_ico.gif) no-repeat 13px 11px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 210px 14px;
+}
+
+.nav-item.book {
+    background: url(../../images/work1/book_ico.gif) no-repeat 12px 13px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 200px 14px;
+}
+
+.nav-item.book:hover {
+    background: url(../../images/work1/book_ico.gif) no-repeat 12px 13px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 210px 14px;
+}
+
+.nav-item.office {
+    background: url(../../images/work1/office_ico.gif) no-repeat 10px 9px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 200px 14px;
+}
+
+.nav-item.office:hover {
+    background: url(../../images/work1/office_ico.gif) no-repeat 10px 9px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 210px 14px;
+}
+
+.nav-item.outdoors {
+    background: url(../../images/work1/outdoors_ico.gif) no-repeat 12px 13px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 200px 14px;
+}
+
+.nav-item.outdoors:hover {
+    background: url(../../images/work1/outdoors_ico.gif) no-repeat 12px 13px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 210px 14px;
+}
+
+.nav-item.card {
+    background: url(../../images/work1/card_ico.gif) no-repeat 13px 11px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 200px 14px;
+}
+
+.nav-item.card:hover {
+    background: url(../../images/work1/card_ico.gif) no-repeat 13px 11px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 210px 14px;
+}
+
+.nav-item.tool {
+    background: url(../../images/work1/tool_ico.gif) no-repeat 13px 12px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 200px 14px;
+}
+
+.nav-item.tool:hover {
+    background: url(../../images/work1/tool_ico.gif) no-repeat 13px 12px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 210px 14px;
+}
+
+.nav-item.activity {
+    background: url(../../images/work1/activity_ico.gif) no-repeat 14px 9px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 200px 14px;
+}
+
+.nav-item.activity:hover {
+    background: url(../../images/work1/activity_ico.gif) no-repeat 14px 9px,
+                url(../../images/work1/right_arrow_ico.gif) no-repeat 210px 14px;
+}

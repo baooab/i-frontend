@@ -1,0 +1,99 @@
+/**
+ * reset style
+ */
+
+a {
+    text-decoration: none;
+    color: #373f3f;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+dl, dd {
+    margin: 0;
+}
+
+/**
+ * sales style
+ */
+
+.sales {
+    margin: 45px auto;
+    width: 525px;
+    border: 1px solid #e6e6e6;
+    padding: 20px;
+    font-size: 12px;
+    font-family: 'micorsoft yahei';
+}
+
+/* 头部 */
+.sales-header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 0;
+}
+
+.sales-header dl:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.sales-header dt, .sales-header dd {
+    display: inline-block;
+    font: 12px/12px 'micorsoft yahei';
+}
+
+.sales-header dl .divider {
+    padding: 0 9px;
+    font-size: 13px;
+    color: #373f3f;
+}
+
+.sales-header a {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.sales-header .active a {
+    background: #45a4fc;
+    color: #fff;
+    padding: 7px 5px;
+}
+
+/* 内容 */
+.sales-body {
+    margin-top: 30px;
+    font-size: 0;
+}
+
+.sales-item {
+    display: inline-block;
+    width: 155px;
+}
+
+.sales-item a,
+.sales-item span {
+    display: block;
+}
+
+.sales-item aside {
+    text-align: center;
+    font: 12px/21px 'microsoft yahei';
+    padding-top: 20px;
+}
+
+.sales-item .value {
+    color: #f95a59;
+}
+
+.sales-item .btn {
+    padding: 5px 15px;
+    background: #0d76cf;
+    color: #fff;
+    margin-top: 8px;
+}
+
+.sales-item:not(:last-child) {
+    margin-right: 30px;
+}
