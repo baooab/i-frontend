@@ -1,99 +1,88 @@
 /**
- * reset style
+ * 重置样式
  */
-
-a {
-    text-decoration: none;
-    color: #373f3f;
-}
-
-a:hover {
-    text-decoration: underline;
-}
 
 dl, dd {
     margin: 0;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
 /**
- * sales style
+ * 板块样式
  */
 
 .sales {
-    margin: 45px auto;
+    border: 1px solid #eee;
     width: 525px;
-    border: 1px solid #e6e6e6;
     padding: 20px;
-    font-size: 12px;
-    font-family: 'micorsoft yahei';
 }
 
-/* 头部 */
 .sales-header {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
     font-size: 0;
 }
 
-.sales-header dl:not(:last-child) {
+.sales-header dl:first-child {
     margin-bottom: 6px;
 }
 
 .sales-header dt, .sales-header dd {
-    display: inline-block;
-    font: 12px/12px 'micorsoft yahei';
+    font: 12px/25px 'Microsoft YaHei UI';
+    display: inline;
 }
 
-.sales-header dl .divider {
-    padding: 0 9px;
-    font-size: 13px;
-    color: #373f3f;
-}
-
-.sales-header a {
+/* 仅对 a 标签使用 margin、padding 样式
+ * 文字与 | 之间的 10px 全是由 a  标签决定的
+ * 因为父级的 font-size 是 0
+ * | 两边是没空格的
+ */
+.sales-header dd a {
     display: inline-block;
+    margin: 0 5px;
     padding: 0 5px;
 }
 
-.sales-header .active a {
+.sales-header dd.active a, .sales-header dd:hover a {
     background: #45a4fc;
-    color: #fff;
-    padding: 7px 5px;
+    color: #ffffff;
 }
 
-/* 内容 */
 .sales-body {
-    margin-top: 30px;
+    margin-top: 20px;
+    border-top: 1px solid #eeeeee;
+    padding-top: 30px;
     font-size: 0;
 }
 
-.sales-item {
+.sales-body .sales-item {
     display: inline-block;
     width: 155px;
-}
-
-.sales-item a,
-.sales-item span {
-    display: block;
-}
-
-.sales-item aside {
+    font: 12px/21px 'Microsoft YaHei UI';
     text-align: center;
-    font: 12px/21px 'microsoft yahei';
-    padding-top: 20px;
 }
 
-.sales-item .value {
-    color: #f95a59;
-}
-
-.sales-item .btn {
-    padding: 5px 15px;
-    background: #0d76cf;
-    color: #fff;
-    margin-top: 8px;
-}
-
-.sales-item:not(:last-child) {
+.sales-body .sales-item:not(:last-child) {
     margin-right: 30px;
+}
+
+.sales-body .sales-item .value {
+    display: block;
+    color: red;
+}
+
+.sales-body .sales-item .btn {
+    background: #0d76cf;
+    padding: 10px 15px;
+    display: inline-block;
+    color: #ffffff;
+    margin-top: 8px;
 }
