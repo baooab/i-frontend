@@ -1,0 +1,132 @@
+/**
+ * 重置样式
+ */
+
+dl, dd, h2, p {
+    margin: 0;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/**
+ * 星座板块样式
+ */
+
+.channel {
+    width: 410px;
+}
+
+/* 头部 */
+.channel header {
+    height: 52px;
+    background: #eee url(../../images/work3/header_bg.png) no-repeat;
+    padding-left: 62px;
+    border-bottom: 2px solid #ff7a7a;
+}
+
+.channel header h2 {
+    color: #fff;
+    font: bold 24px/66px 'Microsoft YaHei UI';
+}
+
+.channel-body {
+    padding: 12px 0 0 10px;
+}
+
+/* 标签区域 */
+.channel-body dl {
+    font-size: 0;
+}
+
+.channel-body dd {
+    display: inline-block;
+    margin: 12px 2px 0;
+}
+
+.channel-body dt {
+    font: 20px/36px 'Microsoft YaHei UI';
+    border-bottom: 1px solid #dadada;
+}
+
+.channel-body dd a {
+    display: block;
+    width: 91px;
+    height: 31px;
+    font: 16px/31px 'Microsoft YaHei UI';
+    text-align: center;
+    background: #ff7a7a;
+    color: #fff;
+    border: 1px solid #ff7a7a;
+}
+
+.channel-body dd.active a, .channel-body dd:hover a {
+    background: #fff;
+    border: 1px solid #dadada;
+    color: #666;
+}
+
+/* 文章区域 */
+.channel-body article {
+    margin: 18px 0;
+    font-size: 0;
+}
+
+.channel-body article .img {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.channel-body article .content {
+    display: inline-block;
+    width: 260px;
+    vertical-align: top;
+}
+
+.channel-body article .title {
+    font: 18px/29px 'Microsoft YaHei UI';
+    color: #ff7a7a;
+}
+
+.channel-body article .intro {
+    font: 14px/20px 'Microsoft YaHei UI';
+}
+
+/* 列表内容区域 */
+.channel-body ol {
+    font-size: 0;
+}
+
+.channel-body ol li {
+    display: inline-block;
+    width: 195px;
+}
+
+.channel-body ol a {
+    font: 16px/27px 'Microsoft YaHei UI';
+    display: block;
+    color: #666;
+}
+
+.channel-body li:hover a, .channel-body li.active a  {
+    color: #ff7a7a;
+}
+
+.channel-body ol span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    font: 14px/16px 'Microsoft YaHei UI';
+    background: #ff7a7a;
+    text-align: center;
+    color: #ffffff;
+    margin-right: 5px;
+}
+
