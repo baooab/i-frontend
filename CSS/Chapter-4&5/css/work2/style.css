@@ -1,0 +1,77 @@
+h2, dl, dd {
+    margin: 0;
+}
+
+body {
+    background: #eee;
+}
+
+
+.review .title {
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+
+.review {
+    overflow: hidden;
+    display: block;
+    width: 1032px;
+    margin: 45px auto;
+    padding: 15px;
+    background: #fff;
+}
+
+.review .volume {
+    float: left;
+    margin-right: 20px;
+    height: 170px;
+    font-size: 0;
+    /* .volume 里的内容下边好像超出了1像素，但不知到为什么，在这里给隐藏掉 */
+    overflow: hidden;
+}
+
+.review a {
+    display: block;
+    position: relative;
+}
+
+.volume span {
+    display: inline-block;
+    position: absolute;
+}
+
+.volume .num {
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 24px;
+    font: 12px/24px 'Microsoft YaHei UI';
+    text-align: center;
+    background: #4aca6d;
+    color: #fff;
+}
+
+.volume .tip {
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font: 14px/20px 'Microsoft YaHei UI';
+    padding: 10px;
+}
+
+.review .prev.volume a, .review .next.volume a {
+    height: 100%;
+    top: 50%;
+    margin-top: -16px;
+}
+
+.review .prev.volume {
+    margin-right: 10px;
+}
+
+.review .next.volume {
+    margin-right: 0;
+    margin-left: -10px;
+}

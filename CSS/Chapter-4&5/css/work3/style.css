@@ -1,0 +1,85 @@
+body, h2 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #eee;
+}
+
+.recommends {
+    background: #fff;
+    width: 1178px;
+    height: 568px;
+    margin: 45px auto;
+    padding: 0 11px 10px 8px;
+}
+
+.recommends .title {
+    font: 30px/100px 'Microsoft YaHei UI';
+    text-align: center;
+}
+
+.recommends-content {
+    position: relative;
+    font-size: 0;
+}
+
+.recommends-content .item {
+    position: absolute;
+    display: inline-block;
+}
+
+.recommends-content .item .desc {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    font: 14px/30px 'Microsoft YaHei UI';
+}
+
+.recommends-content .item-1 {
+    left: 0;
+    top: 0;
+}
+
+.recommends-content .item-2 {
+    left: 237px;
+    top: 0;
+}
+
+.recommends-content .item-3 {
+    left: 474px;
+    top: 0;
+}
+
+.recommends-content .item-4 {
+    left: 711px;
+    top: 0
+}
+
+.recommends-content .item-5 {
+    left: 949px;
+    top: 0;
+}
+
+.recommends-content .item-6 {
+    left: 0;
+    top: 237px;
+}
+
+.recommends-content .item-7 {
+    left: 474px;
+    top: 237px;
+}
+
+.recommends-content .item-8 {
+    left: 711px;
+    top: 237px;
+}
