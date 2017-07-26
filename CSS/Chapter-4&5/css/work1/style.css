@@ -1,3 +1,4 @@
+
 ul {
     margin: 0;
     padding: 0;
@@ -12,131 +13,113 @@ a {
     text-decoration: none;
 }
 
-body {
-    margin: 45px auto;
-    background: #eee;
-}
-
-/* 清除浮动 */
-
 .clearfix::after {
     content: '';
     display: block;
     clear: both;
 }
 
-.channel {
-    margin: 0 auto;
-    background: #fff;
-
-    width: 750px;
-    padding: 15px;
+body {
+    margin: 0;
+    background: #f3f3f3;
 }
 
-/* 头部 */
+.channel {
+    padding: 15px;
+    width: 750px;
+    background: #fff;
+    margin: 45px auto;
+}
 
 .channel-header .img {
-    margin-right: 20px;
+    float: left;
 }
 
-.channel-header .img, .channel-header .viewpoint {
-    float: left;
+.channel-header img {
+    vertical-align: middle;
 }
 
 .channel-header .viewpoint {
     width: 390px;
+    float: right;
 }
 
-.channel-header .viewpoint h2 {
-    font: bold 25px/25px 'Microsoft YaHei UI';
+.channel-header h2 {
+    font: bold 24px/24px 'Microsoft YaHei UI';
+    margin-bottom: 12px;
 }
 
-.channel-header h2 a {
-    display: block;
-    color: #353535;
+.channel-header a {
+    color: #000;
 }
 
-.channel-header h2 a:hover {
+.channel-header a:hover {
     color: #35b558;
 }
 
-.channel-header .viewpoint .desc {
+.channel-header .desc {
     font: 14px/24px 'Microsoft YaHei UI';
-    margin: 12px 0 24px 0;
     color: #8b8b8b;
-    text-indent: 24px;
-    width: 378px;
+    text-indent: 20px;
+    padding-right: 12px;
+    margin-bottom: 24px;
 }
 
-.channel-header .vote p {
+.channel-header .join {
     font: 12px/12px 'Microsoft YaHei UI';
     color: #8b8b8b;
+    margin-bottom: 14px;
 }
 
-.channel-header .vote .mark {
-    color: #fc543d;
+.channel-header .join span {
+    color: #e66e62;
 }
 
-.channel-header .items span {
+.channel-header .true, .channel-header .false {
     display: inline-block;
     width: 60px;
     height: 60px;
+    text-align: center;
+    font: 28px/60px 'Microsoft YaHei UI';
     border-radius: 50%;
     color: #fff;
-    font: 28px/60px 'Microsoft YaHei UI';
-    text-align: center;
-    margin-right: 24px;
 }
 
-.channel-header .items {
-    padding-top: 13px;
+.channel-header .btn-group {
     font-size: 0;
 }
 
-.channel-header .items .true {
+.channel-header .true {
     background: #35b558;
+    margin-right: 24px;
 }
 
-.channel-header .items .false {
+.channel-header .false {
     background: #e66e62;
 }
 
-.channel-header .items .answer {
-    font: 16px/16px 'Microsoft YaHei UI';
+.channel-header .answer {
+    font: 15px/60px 'Microsoft YaHei UI';
     color: #8b8b8b;
-    margin-top: 28px;
     float: right;
 }
 
-.channel-header .items .answer:hover {
-    color: #35b558;
+.channel-list li {
+    font: 17px/34px 'Microsoft YaHei UI';
+    background: url(../../images/work1/dot_ico.gif) no-repeat 0 center;
+    padding-left: 20px;
 }
 
-/* 内容列表区 */
-
-.channel-body {
-    padding-top: 16px;
-}
-
-.channel-body li a {
-    display: inline-block;
-    font: 16px/32px 'Microsoft YaHei UI';
+.channel-list a {
     color: #353535;
 }
 
-.channel-body li.active a, .channel-body li a:hover {
+.channel-list a:hover, .channel-list .active a {
     color: #35b558;
 }
 
-.channel-body li .read-num {
+.channel-list .read-num {
     float: right;
     font: 12px/32px 'Microsoft YaHei UI';
     color: #8b8b8b;
-}
-
-.channel-body .dot::after {
-    display: inline-block;
-    content: '●';
-    color: #35b558;
-    margin-right: 12px;
 }
