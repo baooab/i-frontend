@@ -1,77 +1,84 @@
-h2, dl, dd {
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h3 {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 body {
-    background: #eee;
+    margin: 0;
+    background: #f3f3f3;
 }
 
-
-.review .title {
-    font-size: 20px;
-    margin-bottom: 14px;
-}
-
-.review {
-    overflow: hidden;
-    display: block;
+.scroll {
     width: 1032px;
-    margin: 45px auto;
-    padding: 15px;
     background: #fff;
+    padding: 15px;
+    margin: 45px auto;
 }
 
-.review .volume {
-    float: left;
-    margin-right: 20px;
+.scroll h3 {
+    font: bold 22px/22px 'Microsoft YaHei UI';
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.prev, .next {
+    width: 16px;
     height: 170px;
-    font-size: 0;
-    /* .volume 里的内容下边好像超出了1像素，但不知到为什么，在这里给隐藏掉 */
-    overflow: hidden;
+    float: left;
 }
 
-.review a {
-    display: block;
+.prev {
+    background: url(../../images/work2/prev_arrow.jpg) no-repeat center;
+}
+
+.next {
+    background: url(../../images/work2/next_arrow.jpg) no-repeat center;
+}
+
+.slides {
+    float: left;
+    width: 1000px;
+}
+
+.slides li {
+    width: 230px;
+    height: 170px;
+    float: left;
+    margin: 0 10px;
     position: relative;
 }
 
-.volume span {
-    display: inline-block;
+.slides li span {
+    font: 12px/24px 'Microsoft YaHei UI';
+    background: #4aca6d;
+    padding: 0 10px 0;
+    color: #fff;
     position: absolute;
 }
 
-.volume .num {
-    top: 0;
-    left: 0;
-    width: 72px;
-    height: 24px;
-    font: 12px/24px 'Microsoft YaHei UI';
-    text-align: center;
-    background: #4aca6d;
+.slides li a {
+    font: 14px/18px 'Microsoft YaHei UI';
     color: #fff;
-}
-
-.volume .tip {
-    left: 0;
-    bottom: 0;
-    right: 0;
     background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    font: 14px/20px 'Microsoft YaHei UI';
-    padding: 10px;
-}
-
-.review .prev.volume a, .review .next.volume a {
-    height: 100%;
-    top: 50%;
-    margin-top: -16px;
-}
-
-.review .prev.volume {
-    margin-right: 10px;
-}
-
-.review .next.volume {
-    margin-right: 0;
-    margin-left: -10px;
+    padding: 11px 10px 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
