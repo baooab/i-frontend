@@ -1,0 +1,87 @@
+p {
+    margin: 0;
+}
+
+input {
+    /* 输入框默认有 1px 的内边距 */
+    padding: 0;
+}
+
+input[type=radio] {
+    margin: 0;
+}
+
+label {
+    display: inline-block;
+    margin-right: 20px;
+    width: 70px;
+    text-align: right;
+    font: 14px/34px '宋体';
+    color: #858688;
+}
+
+.required::before {
+    content: '*';
+    color: #e05773;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    font-size: 0;
+}
+
+.form-control {
+    width: 326px;
+    height: 32px;
+}
+
+/* 多选框的边框是算在 width、height 属性里的 */
+.select-control {
+    width: 328px;
+    height: 34px;
+}
+
+.form-control, .select-control, .form-group span {
+    font: 14px/32px '宋体';
+    color: #858688;
+}
+
+.form-control, .select-control {
+    border: 1px solid #e4e9ed;
+}
+
+.form-group span {
+    margin: 0 21px 0 10px;
+}
+
+.help {
+    display: inline-block;
+    font: 14px/32px '宋体';
+    margin-left: 10px;
+}
+
+.help.error {
+    color: #e05773;
+}
+
+.help.right {
+    color: #7bd78c;
+}
+
+#education, #year {
+    width: 159px;
+    margin-right: 10px;
+}
+
+.btn {
+    border: none;
+    width: 140px;
+    height: 32px;
+    background: #e15771;
+    text-align: center;
+    font: 12px/32px '宋体';
+    color: #fff;
+    margin-left: 90px;
+}

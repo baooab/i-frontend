@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/work2/style.css">
+</head>
+<body>
+
+    <form action="">
+        <div class="form-group">
+            <label for="name" class="required">姓名</label>
+            <input type="text" id="name" name="name" class="form-control">
+            <p class="help error">姓名不能为空</p>
+        </div>
+        <div class="form-group">
+            <label class="required" for="gender">性别</label>
+            <input type="radio" id="gender" name="gender" value="male" checked><span>男</span>
+            <input type="radio" name="gender" value="female"><span>女</span>
+        </div>
+        <div class="form-group">
+            <label for="telephone" class="required">电话</label>
+            <input type="text" id="telephone" name="telephone" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email" class="required">邮箱</label>
+            <input type="email" id="email" name="email" class="form-control">
+            <p class="help right">填写正确</p>
+        </div>
+        <div class="form-group">
+            <label for="job" class="required">求职意向</label>
+            <input type="text" id="job" name="job" class="form-control" value="web前端">
+        </div>
+        <div class="form-group">
+            <label for="education" class="required">最高学历</label>
+            <select name="education" id="education" class="select-control">
+                <option value="DZ" selected>大专</option>
+                <option value="BK">本科</option>
+            </select><select name="year" id="year" class="select-control">
+                <option value="2011" selected>2011年</option>
+                <option value="2012">2012年</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="howlong" class="required">工作年限</label>
+            <select name="howlong" id="howlong" class="select-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="city">所在地</label>
+            <select name="city" id="city" class="select-control">
+                <option value="BJ" selected>北京</option>
+                <option value="SH">上海</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="提交" class="btn">
+        </div>
+    </form>
+</body>
+</html>

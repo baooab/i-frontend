@@ -1,0 +1,148 @@
+/**
+ * 样式重置
+ */
+h3, h4, p {
+    margin: 0;
+}
+
+th, td {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/**
+ * 服务器信息样式
+ */
+.servers {
+    border: 1px solid #fc543d;
+    margin: 45px auto;
+    width: 940px;
+    position: relative;
+}
+
+/* 推荐小图标 */
+.servers aside {
+    position: absolute;
+    width: 42px;
+    height: 41px;
+    top: 0;
+    left: 0;
+    background: url(../../images/work1/mark_bg.png) no-repeat;
+}
+
+.servers aside .mark {
+    display: block;
+    color: #fff;
+    margin: 4px 0 0 6px;
+    font: 16px/16px 'Microsoft YaHei UI';
+}
+
+/* 头部 */
+.servers header {
+    padding: 26px 0 18px 96px;
+    background: url(../../images/work1/header_bg.jpg) no-repeat 30px 23px;
+    border-bottom: 1px solid #eee;
+}
+
+.servers header .title {
+    font: 18px/18px 'Microsoft YaHei UI';
+    margin-bottom: 9px;
+    color: #000;
+}
+
+.servers header small {
+    font: 11px/16px 'Microsoft YaHei UI';
+    color: #fff;
+    background: #ffc600;
+    padding: 0 4px;
+}
+
+.servers header .intro {
+    font: 11px/11px 'Microsoft YaHei UI';
+    color: #333;
+}
+
+/* 内容 */
+table {
+    border-collapse: separate;
+    border-spacing: 18px;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+}
+
+/* 内容头部 */
+thead th {
+    height: 98px;
+    border-bottom: 1px solid #eee;
+}
+
+thead th .title {
+    font: 18px/18px 'Microsoft YaHei UI';
+    color: #000;
+}
+
+thead th .intro {
+    font: 11px/21px 'Microsoft YaHei UI';
+    color: #a5a29f;
+}
+
+/* 内容主体 */
+tbody td {
+    padding-left: 9px;
+    font-size: 0;
+}
+
+tbody td .content {
+    display: inline-block;
+    height: 50px;
+}
+
+tbody td .content:first-child {
+    border-right: 1px dashed #dbdbdb;
+}
+
+tbody .content .item, tbody .content .value {
+    font: 11px/11px 'Microsoft YaHei UI';
+    width: 101px;
+}
+
+tbody .content .item {
+    color: #818181;
+    margin: 9px 0 8px 0;
+}
+
+tbody .content .value {
+    color: #000;
+}
+
+tfoot .price-month, tfoot .price-year {
+    font: 12px/30px 'Microsoft YaHei UI';
+}
+
+tfoot .price-month strong, tfoot .price-year strong {
+    color: #fd6620;
+}
+
+tfoot .price-year span {
+    display: inline-block;
+    border: 1px solid #fd6620;
+    padding: 0 5px;
+    color: #fd6620;
+    margin-left: 15px;
+}
+
+tfoot td .btn {
+    display: inline-block;
+    width: 140px;
+    height: 36px;
+    background: #fd6620;
+    color: #fff;
+    margin-top: 15px;
+    font: 12px/36px 'Microsoft YaHei UI';
+}
