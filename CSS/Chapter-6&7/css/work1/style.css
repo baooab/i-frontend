@@ -93,36 +93,34 @@ thead th .intro {
 }
 
 /* 内容主体 */
-tbody td {
-    padding-left: 9px;
-    font-size: 0;
-}
 
-tbody td .content {
-    display: inline-block;
+tbody td {
     height: 50px;
 }
 
-tbody td .content:first-child {
-    border-right: 1px dashed #dbdbdb;
+tbody td:nth-child(odd) {
+    border-right: 1px dashed #eee;
 }
 
-tbody .content .item, tbody .content .value {
-    font: 11px/11px 'Microsoft YaHei UI';
-    width: 101px;
+tbody td .item, tbody td .value {
+    font: 12px/12px 'Microsoft YaHei UI';
 }
 
-tbody .content .item {
+tbody td .item {
     color: #818181;
-    margin: 9px 0 8px 0;
+    margin-bottom: 8px;
 }
 
-tbody .content .value {
+tbody td .value {
     color: #000;
 }
 
 tfoot .price-month, tfoot .price-year {
     font: 12px/30px 'Microsoft YaHei UI';
+}
+
+tfoot .price-year {
+    margin-bottom: 15px;
 }
 
 tfoot .price-month strong, tfoot .price-year strong {
@@ -143,6 +141,5 @@ tfoot td .btn {
     height: 36px;
     background: #fd6620;
     color: #fff;
-    margin-top: 15px;
     font: 12px/36px 'Microsoft YaHei UI';
 }
