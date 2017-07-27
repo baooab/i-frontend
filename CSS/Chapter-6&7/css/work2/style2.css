@@ -1,0 +1,80 @@
+input {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    font-size: 0;
+}
+
+.form-group label {
+    width: 70px;
+    font-size: 14px;
+    text-align: right;
+    margin-right: 20px;
+    color: #878787;
+    display: inline-block;
+}
+
+.form-group label.no-margin {
+    width: auto;
+    padding-left: 10px;
+}
+
+.form-group .required::before {
+    content: '*';
+    display: inline-block;
+    margin-right: 5px;
+    color: #da5a77;
+}
+
+.form-control {
+    width: 328px;
+    height: 32px;
+    border: 1px solid #efefef;
+    font-size: 14px;
+    color: #878787;
+}
+
+.help {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.help.error {
+    color: #984d5d;
+}
+
+.help.right {
+    color: #56b291;
+}
+
+.select-control {
+    width: 330px;
+    height: 34px;
+    border: 1px solid #efefef;
+    font-size: 14px;
+    color: #878787;
+}
+
+#education, #year {
+    width: 160px;
+    margin-right: 10px;
+}
+
+.btn {
+    margin-left: 90px;
+    width: 140px;
+    height: 36px;
+    background: #ff4c68;
+    text-align: center;
+    font: 12px/36px '宋体';
+    color: #fff;
+    border: none;
+}
