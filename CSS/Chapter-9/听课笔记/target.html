@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<style>
+    div[id^=d] {
+        display: none;
+    }
+
+    /* 指定锚点改变时，目标 div 的 display 属性变为 block */
+    div:target {
+        display: block;
+    }
+</style>
+
+<ul>
+    <li><a href="#d1">to #d1</a></li>
+    <li><a href="#d2">to #d2</a></li>
+    <li><a href="#d3">to #d3</a></li>
+</ul>
+
+<div id="d1">#d1</div>
+<div id="d2">#d2</div>
+<div id="d3">#d3</div>
+
+</body>
+</html>

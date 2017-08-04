@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .slide-wrap {
+            width: 240px;
+            height: 320px;
+            border: 2px solid #000;
+            margin: 45px auto;
+            overflow: hidden;
+        }
+
+        ul {
+            width: 1440px;
+            animation: slide 16s ease 1s infinite normal;
+        }
+
+        ul:hover {
+            animation-play-state: paused;
+        }
+
+        li {
+            float: left;
+        }
+
+        li img {
+            width: 240px;
+        }
+        
+        @keyframes slide {
+            20% {
+                transform: translate(-240px);
+            }
+
+            40% {
+                transform: translate(-480px);
+            }
+
+            60% {
+                transform: translate(-720px);
+            }
+
+            80% {
+                transform: translate(-960px);
+            }
+
+            100% {
+                transform: translate(-1200px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="slide-wrap">
+    <ul class="clearfix">
+        <li><a href="#"><img src="./images/movie1.jpg" alt="img"></a></li>
+        <li><a href="#"><img src="./images/movie2.jpg" alt="img"></a></li>
+        <li><a href="#"><img src="./images/movie3.jpg" alt="img"></a></li>
+        <li><a href="#"><img src="./images/movie4.jpg" alt="img"></a></li>
+        <li><a href="#"><img src="./images/movie5.jpg" alt="img"></a></li>
+        <li><a href="#"><img src="./images/movie1.jpg" alt="img"></a></li>
+    </ul>
+</div>
+
+</body>
+</html>

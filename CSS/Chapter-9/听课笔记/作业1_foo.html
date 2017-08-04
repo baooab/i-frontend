@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            border: none;
+            vertical-align: middle;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        a:hover {
+            opacity: 0.85;
+        }
+
+        /* 轮播样式 */
+
+        .slide-wrap {
+            border: 2px solid #000;
+            width: 595px;
+            height: 120px;
+            overflow: hidden;
+            position: relative;
+            margin: 45px auto;
+        }
+
+        ul {
+            position: absolute;
+            animation: slide 20s linear infinite normal;
+        }
+
+        ul:hover {
+            animation-play-state: paused;
+        }
+
+        li {
+            position: absolute;
+        }
+
+        li img {
+            height: 120px;
+        }
+
+        li:nth-child(2) {
+            left: 223px;
+        }
+
+        li:nth-child(3) {
+            left: 403px;
+        }
+
+        li:nth-child(4) {
+            left: 595px;
+        }
+
+        li:nth-child(5) {
+            left: 715px;
+        }
+
+        li:nth-child(6) {
+            left: 835px;
+        }
+
+        /* 为了保持首尾衔接的效果，冗余图片样式 */
+
+        li:nth-child(7) {
+            left: 1041px;
+        }
+
+        li:nth-child(8) {
+            left: 1264px;
+        }
+
+        li:nth-child(9) {
+            left: 1444px;
+        }
+
+        @keyframes slide {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: -1041px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="slide-wrap">
+    <ul>
+        <li><a href="#"><img src="./images/donghua.jpg" alt="img"></a></li>
+        <li><a href="#"><img src="./images/douya.jpg" alt="img"></a></li>
+        <li><a href="#"><img src="./images/jianghu.jpg" alt="img"></a></li>
+        <li><a href="#"><img src="./images/me.png" alt="img"></a></li>
+        <li><a href="#"><img src="./images/nvhai.jpg" alt="img"></a></li>
+        <li><a href="#"><img src="./images/nvzi.jpg" alt="img"></a></li>
+
+        <li><a href="#"><img src="./images/donghua.jpg" alt="img"></a></li>
+        <li><a href="#"><img src="./images/douya.jpg" alt="img"></a></li>
+        <li><a href="#"><img src="./images/jianghu.jpg" alt="img"></a></li>
+    </ul>
+</div>
+
+</body>
+</html>

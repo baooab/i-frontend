@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body, p {
+            margin: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 100px;
+            background: #eee;
+            margin-bottom: 1px;
+            font: 24px/100px 'Microsoft JhengHei UI';
+            text-align: center;
+        }
+
+        p:nth-child(2) {
+            background: #ff4400;
+        }
+
+        div:nth-child(3) {
+            background: paleturquoise;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">div 1</div>
+<p class="box">p 1（p:nth-child(2)）</p>
+<div class="box">div 2（div:nth-child(3)）</div>
+<p class="box">p 2</p>
+
+</body>
+</html>

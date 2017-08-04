@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .outer {
+            width: 300px;
+            height: 150px;
+            margin: 45px auto;
+            border: 1px solid #000000;
+            text-align: center;
+            transform-style: preserve-3d;
+            perspective: 100px;
+        }
+
+        .innerX, .innerY, .innerZ {
+            width: 80px;
+            height: 80px;
+            background: #DEB887;
+            margin: 25px auto;
+            transition: all 1s ease;
+        }
+
+        .outer:hover .innerX {
+            transform: rotateX(360deg);
+        }
+
+        .outer:hover .innerY {
+            transform: rotateY(360deg);
+        }
+
+        .outer:hover .innerZ {
+            transform: rotateZ(360deg);
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="innerX">rotateX</div>
+</div>
+<div class="outer">
+    <div class="innerY">rotateY</div>
+</div>
+<div class="outer">
+    <div class="innerZ">rotateZ</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h3 {
+            text-align: center;
+        }
+
+        h3 span {
+            position: relative;
+            background: #eee;
+            padding-left: 24px;
+        }
+
+        h3 span::after, h3 span::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 60px;
+            border-top: 1px solid #000;
+            top: 50%;
+        }
+
+        h3 span::before {
+            left: -73px;
+        }
+
+        h3 span::after {
+            left: 73px;
+        }
+    </style>
+</head>
+<body>
+
+<h3><span>标题</span></h3>
+
+</body>
+</html>
