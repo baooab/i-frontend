@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业3 - JS第一章</title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            border: none;
+            vertical-align: bottom;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .centered {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slides {
+            width: 890px;
+            box-shadow: 0 0 12px #8d8d8d;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .image-wrap {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .image-wrap > .image {
+            width: 600px;
+        }
+
+        .image-wrap > .indicators {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 20px;
+            text-align: center;
+        }
+
+        .image-wrap > .indicators > li {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 10px #fff;
+            cursor: pointer;
+            margin: 0 4px;
+            transition: transform .1s ease;
+        }
+
+        .image-wrap > .indicators > li.active {
+            transform: scale(1.25, 1.25);
+            background: #e2986b;
+            box-shadow: 0 0 10px 2px #e2986b;
+        }
+
+        .image-wrap > .prev,
+        .image-wrap > .next {
+            position: absolute;
+            top: 150px;
+            width: 60px;
+            line-height: 80px;
+            font-size: 32px;
+            background: rgba(0, 0, 0, .3);
+            transition: transform .1s ease;
+            text-align: center;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .image-wrap > .prev:hover,
+        .image-wrap > .next:hover {
+            transform: scale(1.15, 1.15);
+            background: rgba(0, 0, 0, .35);
+        }
+
+        .image-wrap > .prev {
+            left: 10px;
+        }
+
+        .image-wrap > .next {
+            right: 10px;
+        }
+
+        .image-desc {
+            float: right;
+            width: 280px;
+        }
+
+        .image-desc > .count {
+            font-size: 25px;
+            line-height: 60px;
+        }
+
+        .image-desc > .count > strong {
+            color: darkred;
+        }
+
+        .image-desc > .detail {
+            display: table-cell;
+            vertical-align: middle;
+            width: 9999px;
+            height: 255px;
+            font-size: 20px;
+            padding-right: 20px;
+            color: #999;
+            text-align: justify;
+        }
+
+        .image-desc > .mode {
+            text-align: center;
+        }
+
+        .image-desc > .mode > .default,
+        .image-desc > .mode > .loop {
+            display: inline-block;
+            width: 120px;
+            line-height: 42px;
+            color: #fff;
+            background: #eee;
+        }
+
+        .image-desc > .mode > .active {
+            background: #e2986b;
+            box-shadow: 0 0 12px #e2986b;
+        }
+
+        .rubberBand {
+            animation: rubberBand .8s ease 1;
+        }
+
+        @keyframes rubberBand {
+            from {
+                transform: scale3d(1, 1, 1);
+            }
+
+            30% {
+                transform: scale3d(1.25, 0.75, 1);
+            }
+
+            40% {
+                transform: scale3d(0.75, 1.25, 1);
+            }
+
+            50% {
+                transform: scale3d(1.15, 0.85, 1);
+            }
+
+            65% {
+                transform: scale3d(.95, 1.05, 1);
+            }
+
+            75% {
+                transform: scale3d(1.05, .95, 1);
+            }
+
+            to {
+                transform: scale3d(1, 1, 1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="centered">
+    <div class="slides clearfix">
+        <div class="image-wrap">
+            <img class="image" src="http://via.placeholder.com/600x400" alt="img">
+            <ul class="indicators">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <a class="btn prev" href="#">&lt;</a>
+            <a class="btn next" href="#">&gt;</a>
+        </div>
+        <div class="image-desc">
+            <div class="count">图片数量 <strong><span class="curr">0</span>/<span class="total">0</span></strong></div>
+            <div class="detail"></div>
+            <div class="mode">
+                <a href="javascript:void(0);" class="active default">顺序切换</a>
+                <a href="javascript:void(0);" class="loop">循环切换</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function () {
+        let images = [
+            {
+                'url': './images/p6.jpg',
+                'desc': '当阳光照在海面上，我思念你。'
+            },
+            {
+                'url': './images/p1.jpg',
+                'desc': '当阳光照在海面上，我思念你；当朦胧月色洒在泉水里，我思念你。张开耳朵，当你能听到你的心跳，你爱的人也正在爱你，闭上眼睛当你的嘴角露出一丝微笑，你爱的人也正在爱你。'
+            },
+            {
+                'url': './images/p2.jpg',
+                'desc': '望着窗外，如果树枝在风中轻轻摇摆，那么你爱的人，也在爱着你，侧耳倾听，如果你能听见你的心跳，那么你爱的人，也在爱着你；闭上眼睛，如果你的唇边挂着一丝微笑，那么你爱的人，也在爱着你。'
+            },
+            {
+                'url': './images/p3.jpg',
+                'desc': '听说第一次下雪的时候，应该和爱人一起漫步。'
+            },
+            {
+                'url': './images/p4.jpg',
+                'desc': '今早我打开窗户，浪漫的微风吹过，象征着秋天的来临，我将让微风把我的信捎给你。'
+            },
+            {
+                'url': './images/p5.jpg',
+                'desc': '当太阳照耀海面的时候，我就想到你。当春天出现昏暗的月光，我就想到你。'
+            }
+        ];
+        let imageCount = images.length, currImageIndex = 0, currImage = images[currImageIndex];
+        let slides = document.querySelector('.slides');
+        let image = slides.querySelector('.image-wrap > .image');
+        let imageDetail = slides.querySelector('.image-desc > .detail');
+        let imageCountTotal = slides.querySelector('.image-desc > .count .total');
+        let imageCountCurr = slides.querySelector('.image-desc > .count .curr');
+        let indicators = slides.querySelectorAll('.indicators > li');
+        let prevIndicatorIndex = 0, currIndicatorIndex = 0;
+        let prevNextButtons = slides.querySelectorAll('.image-wrap > .btn');
+        let mode = slides.querySelector('.image-desc > .mode'), currMode = 'default', modeButtons = mode.querySelectorAll('a');
+
+        initImage(currImageIndex);
+
+        for (let i = 0; i < indicators.length; i++) {
+            indicators[i].addEventListener('click', function () {
+                currIndicatorIndex = i;
+                changeIndicator(currIndicatorIndex);
+
+                currImageIndex = currIndicatorIndex;
+                changeImage(currImageIndex);
+            })
+        }
+
+        for (let j = 0; j < modeButtons.length; j++) {
+            modeButtons[j].addEventListener('click', function () {
+                this.classList.add('active');
+
+                if (this.classList.contains('default')) {
+                    this.nextElementSibling.classList.remove('active');
+                    currMode = 'default';
+                } else if (this.classList.contains('loop')) {
+                    this.previousElementSibling.classList.remove('active');
+                    currMode = 'loop';
+                }
+            });
+        }
+
+        for (let k = 0; k < prevNextButtons.length; k++) {
+            prevNextButtons[k].addEventListener('click', function () {
+                if (this.classList.contains('prev')) {
+                    if ((currImageIndex - 1) >= 0) {
+                        currImageIndex -= 1;
+                    } else {
+                        if (currMode === 'loop') {
+                            currImageIndex = imageCount - 1;
+                        } else {
+                            animateModeButton(0);
+                        }
+                    }
+                } else {
+                    if ((currImageIndex + 1) < imageCount) {
+                        currImageIndex += 1;
+                    } else {
+                        if (currMode === 'loop') {
+                            currImageIndex = 0;
+                        } else {
+                            animateModeButton(0);
+                        }
+                    }
+                }
+
+                changeImage(currImageIndex);
+
+                currIndicatorIndex = currImageIndex;
+                changeIndicator(currIndicatorIndex);
+            });
+        }
+
+        function  initImage(imageIndex) {
+            imageCountTotal.innerText = imageCount;
+            changeImage(imageIndex);
+        }
+
+        function changeImage(currImageIndex) {
+            currImage = images[currImageIndex];
+            image.src = currImage.url;
+            imageDetail.innerText = currImage.desc;
+            imageCountCurr.innerText = currImageIndex + 1;
+        }
+
+        function  changeIndicator(currIndicatorIndex) {
+            if (currIndicatorIndex !== prevIndicatorIndex) {
+                indicators[currIndicatorIndex].classList.add('active');
+                indicators[prevIndicatorIndex].classList.remove('active');
+                prevIndicatorIndex = currIndicatorIndex;
+            }
+        }
+
+        function  animateModeButton(index) {
+            let self = modeButtons[index];
+            self.classList.add('rubberBand');
+            let timer = setTimeout(function () {
+                self.classList.remove('rubberBand');
+                clearTimeout(timer);
+            }, 1000);
+        }
+    })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>作业1 - 基础第4~5章练习</title>
+    <style>
+        body, h3, p {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            border: 0;
+            vertical-align: middle;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        body {
+            background: #eee;
+            padding-top: 45px;
+        }
+
+        .news {
+            width: 750px;
+            margin: 0 auto;
+
+            background: #fff;
+            padding: 15px 15px 14px;
+        }
+
+        .news .head {
+            margin-bottom: 16px;
+        }
+
+        .news .img-wrap {
+            float: left;
+        }
+
+        .news .img-wrap img {
+            width: 340px;
+            height: 228px;
+        }
+
+        .news .text-wrap {
+            float: right;
+            width: 390px;
+        }
+
+        .news .text-wrap h3 {
+            font: bold 24px/26px 'Microsoft YaHei UI';
+            margin-bottom: 11px;
+        }
+
+        .news .text-wrap h3 a {
+            color: #353535;
+        }
+
+        .news .text-wrap h3 a:hover {
+            color: #35b558;
+        }
+
+        .news .text-wrap p:first-of-type {
+            font: 14px/24px 'Microsoft YaHei UI';
+            color: #8b8b8b;
+            text-indent: 9px;
+            padding-right: 12px;
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        .news .text-wrap p:nth-of-type(2) {
+            font: 12px/40px 'Microsoft YaHei UI';
+            color: #8b8b8b;
+        }
+
+        .news .text-wrap p:nth-of-type(2) span {
+            color: #fc543d;
+        }
+
+        .news .text-wrap p:last-of-type .true, .news .text-wrap p:last-of-type .false {
+            float: left;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            color: #fff;
+            font: 28px/60px 'Microsoft YaHei UI';
+            text-align: center;
+        }
+
+        .news .text-wrap p:last-of-type .true {
+            background: #35b558;
+            margin-right: 24px;
+        }
+
+        .news .text-wrap p:last-of-type .false {
+            background: #e66e62;
+        }
+
+        .news .text-wrap p:last-of-type .answer {
+            float: right;
+            font: 15px/60px 'Microsoft YaHei UI';
+            color: #8b8b8b;
+        }
+
+        .news .text-wrap p:last-of-type .answer:hover {
+            color: #35b558;
+        }
+
+        .news .list {
+            font: 16px/34px 'Microsoft YaHei UI';
+        }
+
+        .news .list li::before {
+            content: '●';
+            display: inline-block;
+            padding-right: 12px;
+            color: #35b558;
+        }
+
+        .news .list a {
+            color: #353535;
+        }
+
+        .news .list a:hover, .news .list li.active a {
+            color: #35b558;
+        }
+
+        .news .list span {
+            float: right;
+            font: 12px/34px 'Microsoft YaHei UI';
+            color: #8b8b8b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <section class="news">
+            <div class="head clearfix">
+                <div class="img-wrap">
+                    <a href="#">
+                        <img src="./images/ques_img@340x228.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="text-wrap">
+                    <h3><a href="#">打鸡血能使人兴奋？</a></h3>
+                    <p>“看你兴奋那样，跟打了鸡血似的”，已经成为人所共知的调侃人兴奋过度的俚语。这个说法有道理吗？打鸡血真的会让人兴奋？</p>
+                    <p>255900人参与，<span>23%</span>人都错了</p>
+                    <p class="clearfix">
+                        <a href="#" class="true">真</a>
+                        <a href="#" class="false">假</a>
+                        <a href="#" class="answer">求真相</a>
+                    </p>
+                </div>
+            </div>
+            <ul class="list">
+                <li><a href="#">马桶冲水时最好盖上马桶盖？</a><span>阅读(334023)</span></li>
+                <li><a href="#">坐月子不能喝水，要用米酒代替？</a><span>阅读(257922)</span></li>
+                <li class="active"><a href="#">水果分公母，品质有差别？</a><span>阅读(245693)</span></li>
+                <li><a href="#">海水会越来越咸？</a><span>阅读(63192)</span></li>
+                <li><a href="#">一天只能吃一个鸡蛋，多了不吸收？</a><span>阅读(121028)</span></li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>

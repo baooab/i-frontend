@@ -1,0 +1,124 @@
+body, h3, h4, p {
+    margin: 0;
+}
+
+th, td {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font: 12px/1.6667 'Microsoft YaHei', sans-serif;
+    color: #333;
+}
+
+.hosts {
+    width: 940px;
+    border: 1px solid #ff6600;
+
+    overflow: hidden;
+}
+
+.hosts > .icon-reco {
+    position: absolute;
+    width: 42px;
+    height: 40px;
+    background: url(../images/ico_reco.gif) no-repeat;
+    color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 4px 0 0 5px;
+}
+
+.hosts > .head {
+    padding-left: 96px;
+    background: url(../images/head_bg.gif) no-repeat 30px 22px;
+    height: 82px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 9999px;
+    border-bottom: 1px solid #eee;
+}
+
+.hosts > .head > h3 {
+    font: 18px/26px 'Microsoft YaHei';
+}
+
+.hosts > .head small {
+    font: 11px/16px 'Microsoft YaHei';
+    color: #fff;
+    background: #ffc600;
+    padding: 0 4px;
+    margin-left: 5px;
+}
+
+.hosts > .releases {
+    width: 100%;
+    border-spacing: 18px;
+
+    margin-bottom: -4px;
+}
+
+.hosts td {
+    text-align: center;
+}
+
+.hosts thead th {
+    height: 98px;
+    border-bottom: 1px solid #eee;
+}
+
+.hosts thead th h4 {
+    font: 18px/20px 'Microsoft YaHei';
+}
+
+.hosts thead th p {
+    color: #a5a5a2;
+    font-weight: normal;
+}
+
+.hosts tbody td:nth-child(odd) {
+    border-right: 1px dashed #dbdbdb;
+}
+
+.hosts tbody td p:first-child {
+    color: #a5a5a2;
+}
+
+.hosts tfoot {
+    color: #a5a5a2;
+    line-height: 32px;
+}
+
+.hosts tfoot em {
+    font-style: normal;
+}
+
+.hosts tfoot strong, .hosts tfoot em {
+    color: #fd6620;
+}
+
+.hosts tfoot span {
+    border: 1px solid #fd6620;
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 5px;
+    margin-left: 15px;
+}
+
+.hosts tfoot .btn {
+    display: inline-block;
+    width: 140px;
+    line-height: 36px;
+    background: #fd6620;
+    color: #fff;
+    margin-top: 15px;
+}
+
+/* 无关样式 */
+.container {
+    padding: 20px 0 0 120px;
+}

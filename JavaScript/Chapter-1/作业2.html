@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>作业2 - JS第一章</title>
+    <style>
+        p {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            font: 14px/1.4286 'Microsoft YaHei';
+        }
+
+        .nav {
+            width: 200px;
+            box-shadow: 0 0 10px #8a8a8a;
+        }
+
+        .nav a {
+            text-decoration: none;
+        }
+
+        .nav p {
+            color: #fff;
+            line-height: 45px;
+            background: #ed6355;
+            padding: 0 12px;
+        }
+
+        .nav p:hover {
+            background: #ed7f55;
+        }
+
+        .nav p > a {
+            color: #fff;
+        }
+
+        .nav p > span {
+            cursor: pointer;
+            float: right;
+            width: 25px;
+            text-align: center;
+            font-size: 20px;
+            transition: transform .1s ease;
+        }
+
+        .nav p > span.spread {
+            transform: rotate(45deg);
+        }
+
+        .nav .nav-sub {
+            background: #1e1e1e;
+            display: none;
+        }
+
+        .nav .nav-sub.show {
+            display: block;
+        }
+
+        .nav .nav-sub > li {
+            line-height: 45px;
+        }
+
+        .nav .nav-sub > li > a {
+            display: block;
+            color: #fff;
+            padding-left: 45px;
+        }
+    </style>
+</head>
+<body>
+
+<ul class="nav">
+    <li>
+        <p><a href="#">首页</a><span>+</span></p>
+        <ul class="nav-sub" data-index="0">
+            <li><a href="#">文章</a></li>
+            <li><a href="#">图片</a></li>
+            <li><a href="#">视频</a></li>
+            <li><a href="#">音频</a></li>
+        </ul>
+    </li>
+    <li>
+        <p><a href="#">分类</a><span>+</span></p>
+        <ul class="nav-sub" data-index="1">
+            <li><a href="#">生活</a></li>
+            <li><a href="#">编程</a></li>
+            <li><a href="#">随想</a></li>
+            <li><a href="#">计算机</a></li>
+        </ul>
+    </li>
+    <li>
+        <p><a href="#">联系我</a><span>+</span></p>
+        <ul class="nav-sub" data-index="2">
+            <li><a href="#">Github</a></li>
+            <li><a href="#">微博</a></li>
+            <li><a href="#">QQ</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+    (function () {
+        let nav = document.querySelector('.nav');
+        let subNavs = nav.querySelectorAll('.nav-sub');
+        let spreadButtons = nav.querySelectorAll('span');
+
+        let targetSubNav, prevSubNavIndex = 0, currSubNavIndex;
+        for (let i = 0; i < spreadButtons.length; i++) {
+            spreadButtons[i].addEventListener('click', function (ev) {
+                ev.target.classList.toggle('spread');
+                targetSubNav = ev.target.parentNode.nextElementSibling;
+                targetSubNav.classList.toggle('show');
+
+                currSubNavIndex = i;
+                if (currSubNavIndex !== prevSubNavIndex) {
+                    subNavs[prevSubNavIndex].classList.remove('show');
+                    subNavs[prevSubNavIndex].previousElementSibling.querySelector('span').classList.remove('spread');
+                    prevSubNavIndex = currSubNavIndex;
+                }
+            })
+        }
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* reset style */
+body, h3 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+/* helper style */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* content style */
+body {
+    background: #f3f3f3;
+    padding: 45px;
+}
+
+section {
+    padding: 0 15px 15px;
+    background: #fff;
+    width: 1032px;
+    margin: 0 auto;
+}
+
+section h3 {
+    font: bold 21px/47px 'Microsoft YaHei UI';
+    padding-top: 3px;
+    color: #333;
+}
+
+section .slides {
+    height: 170px;
+}
+
+section .prev, section .next, ul {
+    float: left;
+}
+
+section li {
+    float: left;
+    margin-right: 20px;
+}
+
+section li:last-child {
+    margin-right: 0;
+}
+
+section li a {
+    display: block;
+    width: 230px;
+    height: 100%;
+    position: relative;
+}
+
+section li strong, section li span {
+    position: absolute;
+}
+
+section li strong {
+    left: 0;
+    top: 0;
+    font: 12px/24px 'Microsoft YaHei UI';
+    color: #fff;
+    padding: 0 10px;
+    background: #4aca6d;
+}
+
+section li span {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    padding: 10px;
+    font: 14px/19px 'Microsoft YaHei UI';
+}
+
+section li span:hover {
+    text-decoration: underline;
+}
+
+section .prev, section .next {
+    width: 26px;
+    height: 100%;
+    text-indent: -10000px;
+}
+
+section .prev {
+    background: url(../images/left_arrow.jpg) no-repeat left center;
+}
+
+section .next {
+    background: url(../images/right_arrow.jpg) no-repeat right center;
+}

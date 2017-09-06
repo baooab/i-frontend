@@ -1,0 +1,91 @@
+input {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+select {
+    box-sizing: content-box;
+}
+
+#register-form {
+    font-size: 0;
+}
+
+#register-form .register-label,
+#register-form .tip,
+#register-form input,
+#register-form select,
+#register-form .label-text {
+    font: 14px/18px '宋体';
+    color: #858688;
+}
+
+[type=submit] {
+    position: absolute;
+    z-index: -1;
+}
+
+.register-submit {
+    display: inline-block;
+    width: 140px;
+    text-align: center;
+    font: 12px/36px '宋体';
+    color: #fff;
+    background: #e15771;
+    cursor: pointer;
+}
+
+.register-group {
+    margin-bottom: 20px;
+}
+
+.register-label {
+    display: inline-block;
+    padding-right: 20px;
+    width: 56px;
+    text-align: right;
+}
+
+.icon-star {
+    color: #e15771;
+    position: absolute;
+    margin-left: -11px;
+}
+
+.register-input {
+    border: 1px solid #e4e9ed;
+    width: 328px;
+    height: 32px;
+}
+
+#register-form .label-text {
+    padding: 0 20px 0 10px;
+}
+
+#grade, #grade-year {
+    width: 158px;
+    height: 32px;
+    border: 1px solid #e4e9ed;
+}
+
+#grade {
+    margin-right: 10px;
+}
+
+#register-form .tip {
+    margin-left: 10px;
+}
+
+#register-form .tip-warn {
+    color: #e15771;
+}
+
+#register-form .tip-safe {
+    color: #7bd78c;
+}
+
+/* 无关样式 */
+body {
+    padding: 25px 0 0 25px;
+}

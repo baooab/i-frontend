@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>作业2 - 基础第4~5章练习</title>
+    <style>
+        body, h3 {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            border: 0;
+            vertical-align: middle;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        body {
+            background: #eee;
+            padding-top: 45px;
+        }
+
+        .review {
+            width: 1032px;
+            margin: 0 auto;
+
+            background: #fff;
+            padding: 2px 15px 15px;
+        }
+
+        .review h3 {
+            font: bold 20px/48px 'Microsoft YaHei UI';
+            color: #333;
+        }
+
+        .review .prev, .review .next {
+            width: 26px;
+            height: 170px;
+            text-indent: -10000px;
+        }
+
+        .review .prev, .review .content {
+            float: left;
+        }
+
+        .review .prev {
+            background: url(./images/left_arrow.jpg) no-repeat left center;
+        }
+
+        .review .next {
+            float: right;
+            background: url(./images/right_arrow.jpg) no-repeat right center;
+        }
+
+        .review .slides li {
+            float: left;
+        }
+
+        .review .slides li:not(:last-of-type) {
+            margin-right: 20px;
+        }
+
+        .review .slides a {
+            position: relative;
+            width: 230px;
+            height: 170px;
+            display: block;
+        }
+
+        .review .slides a strong, .review .slides a span {
+            position: absolute;
+        }
+
+        .review .slides a strong {
+            top: 0;
+            left: 0;
+            font: 12px/24px 'Microsoft YaHei UI';
+            color: #fff;
+            padding: 0 10px;
+            background: #4aca6d;
+        }
+
+        .review .slides a span {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font: 14px/20px 'Microsoft YaHei UI';
+            color: #fff;
+            background: rgba(0, 0, 0, .5);
+            padding: 10px;
+        }
+
+        .review .slides a span:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="review">
+        <h3>往期回顾</h3>
+        <div class="slides-wrap clearfix">
+            <a class="prev" href="#" title="上一期">上一期</a>
+            <a class="next" href="#" title="下一期">下一期</a>
+            <div class="content">
+                <ul class="slides clearfix">
+                    <li>
+                        <a href="#">
+                            <img src="./images/holder@230x170.png" alt="img">
+                            <strong>第1211期</strong>
+                            <span>冬天的静电会损害生理功能吗？</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/holder@230x170.png" alt="img">
+                            <strong>第1211期</strong>
+                            <span>晚睡拖延行为背后的心理学机制</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/holder@230x170.png" alt="img">
+                            <strong>第1212期</strong>
+                            <span>为什么每一颗大蒜，都有变成“黑蒜”的超级英雄梦？</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/holder@230x170.png" alt="img">
+                            <strong>第1213期</strong>
+                            <span>为什么聊天时不能始终盯着对方的眼睛？</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

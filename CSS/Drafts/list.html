@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body, p {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: none;
+            vertical-align: middle;
+        }
+
+        .clearfix::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        .daily-list-item {
+            float: left;
+            width: 220px;
+            padding: 7px;
+            margin-right: 6px;
+            display: table;
+        }
+
+        .daily-list-item a {
+            font: 16px/24px 'Microsoft YaHei UI';
+            color: #353535;
+        }
+
+        .daily-list-item a:hover {
+            color: #4aca6d;
+        }
+
+        .daily-list-item img {
+            width: 69px;
+            height: 69px;
+            float: left;
+        }
+
+        .daily-list-item p {
+            width: 136px;
+            padding-left: 14px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="daily-list clearfix">
+        <li class="daily-list-item">
+            <a href="#"><img src="s3.jpg" alt=""></a>
+            <p><a href="#">空调之父、冰淇淋之父…每到夏天，我就很感谢他们</a></p>
+        </li>
+        <li class="daily-list-item">
+            <a href="#"><img src="s2.jpg" alt=""></a>
+            <p><a href="#">给员工植入芯片代替工卡，这家美国公司也这么干了</a></p>
+        </li>
+        <li class="daily-list-item">
+            <img src="s1.jpg" alt="">
+            <p><a href="#">孙悟空为什么非要去东海借兵器，而不是其它地方？</a></p>
+        </li>
+    </ul>
+
+</body>
+</html>

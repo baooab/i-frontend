@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业2 - 基础第6~7章练习</title>
+    <link rel="stylesheet" href="./css/homework2.css">
+</head>
+<body>
+
+    <form id="register-form" action="/register" method="post">
+        <div class="register-group">
+            <label for="name" class="register-label">
+                <span class="icon-star">*</span>
+                姓名
+            </label>
+            <input id="name" name="name" class="register-input" type="text">
+            <span class="tip tip-warn">姓名不能为空</span>
+        </div>
+        <div class="register-group">
+            <label for="male" class="register-label">
+                <span class="icon-star">*</span>
+                性别
+            </label>
+            <input id="male" name="gender" type="radio" checked><label for="male" class="label-text">男</label>
+            <input id="female" name="gender" type="radio"><label for="female" class="label-text">女</label>
+        </div>
+        <div class="register-group">
+            <label for="phone" class="register-label">
+                <span class="icon-star">*</span>
+                电话
+            </label>
+            <input id="phone" name="phone" class="register-input" type="text">
+        </div>
+        <div class="register-group">
+            <label for="email" class="register-label">
+                <span class="icon-star">*</span>
+                邮箱
+            </label>
+            <input id="email" name="email" class="register-input" type="email">
+            <span class="tip tip-safe">填写正确</span>
+        </div>
+        <div class="register-group">
+            <label for="job" class="register-label">
+                <span class="icon-star">*</span>
+                求职意向
+            </label>
+            <input id="job" name="job" class="register-input" type="text" value="web前端">
+        </div>
+        <div class="register-group">
+            <label for="grade" class="register-label">
+                <span class="icon-star">*</span>
+                最高学历
+            </label>
+            <select name="grade" id="grade">
+                <option value="大专">大专</option>
+                <option value="大学">大学</option>
+                <option value="硕士">硕士</option>
+            </select>
+            <select name="grade-year" id="grade-year">
+                <option value="2011">2011年</option>
+                <option value="2012">2012年</option>
+                <option value="2013">2013年</option>
+            </select>
+        </div>
+        <div class="register-group">
+            <label for="work-years" class="register-label">
+                <span class="icon-star">*</span>
+                工作年限
+            </label>
+            <select name="work-years" class="register-input" id="work-years">
+                <option value="1">1年</option>
+                <option value="2">2年</option>
+                <option value="3">3年</option>
+            </select>
+        </div>
+        <div class="register-group">
+            <label for="city" class="register-label">所在地</label>
+            <input id="city" name="city" class="register-input" type="text" value="北京">
+        </div>
+        <div class="register-group">
+            <label class="register-label">&nbsp;</label>
+            <input id="submit" type="submit" value="提交">
+            <label class="register-submit" for="submit">提交</label>
+        </div>
+    </form>
+
+</body>
+</html>

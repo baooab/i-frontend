@@ -1,0 +1,139 @@
+/* reset style */
+body, h3, p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* helper class */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* content style */
+body {
+    background: #f3f3f3;
+    padding-top: 45px;
+}
+
+section {
+    background: #fff;
+    padding: 15px 15px 6px;
+    width: 750px;
+    margin: 0 auto;
+}
+
+section .wrap {
+    margin-bottom: 16px;
+}
+
+section .img {
+    float: left;
+    margin-right: 20px;
+}
+
+section .img img {
+    width: 340px;
+    height: 228px;
+}
+
+section h3 {
+    font: bold 24px/26px 'Microsoft YaHei UI';
+    margin-bottom: 11px;
+}
+
+section h3 a {
+    color: #353535;
+}
+
+section h3:hover > a {
+    color: #35b558;
+}
+
+section p:nth-of-type(1) {
+    font: 14px/24px 'Microsoft YaHei UI';
+    color: #8b8b8b;
+    text-indent: 9px;
+    text-align: justify;
+    margin-bottom: 24px;
+    width: 737px;
+}
+
+section p:nth-of-type(2) {
+    font: 12px/12px 'Microsoft YaHei UI';
+    color: #928b8b;
+    margin-bottom: 14px;
+}
+
+section p:nth-of-type(2) span {
+    color: #fc543d;
+}
+
+section p:nth-of-type(3) span {
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font: 28px/60px 'Microsoft YaHei UI';
+}
+
+section p:nth-of-type(3) span:first-child {
+    background: #35b558;
+    margin-right: 24px;
+}
+
+section p:nth-of-type(3) span:nth-child(2) {
+    background: #e66e62;
+}
+
+section p:nth-of-type(3) a {
+    float: right;
+    font: 15px/60px 'Microsoft YaHei UI';
+    color: #8b8b8b;
+}
+
+section p:nth-of-type(3) a:hover {
+    color: #35b558;
+}
+
+section ul {
+    font: 16px/34px 'Microsoft YaHei UI';
+}
+
+section li::before {
+    content: '●';
+    color: #35b558;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+section ul a {
+    color: #353535;
+}
+
+section ul a:hover, section ul .active a {
+    color: #35b558;
+}
+
+section ul span {
+    float: right;
+    font: 13px/34px 'Microsoft YaHei UI';
+    color: #8b8b8b;
+}

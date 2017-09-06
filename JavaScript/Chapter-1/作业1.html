@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>作业1 - JS第一章</title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .units {
+            position: relative;
+            background: #fff;
+            width: 768px;
+        }
+
+        .units > li {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            transition: transform .3s ease;
+        }
+
+        .units > li > .cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: background .35s ease;
+            background: rgba(255, 255, 255, .3);
+        }
+
+        .units > li.hover {
+            transform: scale(1.25 , 1.25);
+            z-index: 1;
+        }
+
+        .units > li.hover > .cover, .units > li.hovered > .cover {
+            background: none;
+        }
+    </style>
+</head>
+<body>
+
+<ul class="units"></ul>
+
+<script>
+    (function () {
+        let row, col, i, j;
+        let perTop = 80, perLeft = 80, unitSpace = 1;
+        let units = document.querySelector('.units');
+        let tempHtml = '', tempTop, tempLeft, tempPosX, tempPosY, tempStyle;
+        let backgroundImageUrl = './images/Moscow.jpg';
+
+        for (i = 0; i < 6; i++) {
+            row = i + 1;
+            tempTop = i * (perTop + unitSpace);
+            tempPosY = -(i * perTop);
+            for (j = 0; j < 9; j++) {
+                col = j + 1;
+                tempLeft = j * (perLeft + unitSpace);
+                tempPosX = -(j * perLeft);
+                tempStyle = 'left: ' + tempLeft + 'px; top: ' + tempTop + 'px; background: url(' + backgroundImageUrl + ') no-repeat ' + tempPosX + 'px ' + tempPosY + 'px;';
+                tempHtml += '<li style="' + tempStyle + '"><a href="#" class="cover"></a></li>';
+            }
+        }
+
+        units.innerHTML = tempHtml;
+
+        let lis = units.querySelectorAll('li');
+        let len = lis.length;
+        for (let k = 0; k < len; k++) {
+            lis[k].addEventListener('mouseenter', function (ev) {
+                ev.target.classList.remove('hovered');
+                ev.target.classList.add('hover');
+            });
+
+            lis[k].addEventListener('mouseleave', function (ev) {
+                ev.target.classList.remove('hover');
+                ev.target.classList.add('hovered');
+            });
+        }
+    })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* reset style */
+body, h3 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+/* content style */
+body {
+    background: #f3f3f3;
+    padding: 45px;
+}
+
+section {
+    padding: 3px 10px 10px 8px;
+    width: 1178px;
+    background: #fff;
+    margin: 0 auto;
+}
+
+section h3 {
+    font: 29px/97px 'Microsoft YaHei UI';
+    color: #000;
+    text-align: center;
+}
+
+section ul {
+    position: relative;
+    height: 467px;
+}
+
+section li {
+    position: absolute;
+}
+
+section li a {
+    display: inline-block;
+    position: relative;
+}
+
+section li a span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font: 14px/30px 'Microsoft YaHei UI';
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    padding-left: 20px;
+}
+
+section li a span:hover {
+    text-decoration: underline;
+}
+
+section li:nth-of-type(2) {
+    left: 0;
+    bottom: 0;
+}
+
+section li:nth-of-type(3) {
+    left: 237px;
+    top: 0;
+}
+
+section li:nth-of-type(4) {
+    right: 474px;
+    top: 0;
+}
+
+section li:nth-of-type(5) {
+    right: 474px;
+    bottom: 0;
+}
+
+section li:nth-of-type(6) {
+    right: 237px;
+    top: 0;
+}
+
+section li:nth-of-type(7) {
+    right: 0;
+    top: 0;
+}
+
+section li:nth-of-type(8) {
+    right: 0;
+    bottom: 0;
+}

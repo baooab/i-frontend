@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .no-float, .float {
+            font: 24px/80px 'Microsoft JhengHei UI';
+            text-align: center;
+            color: #fff;
+            width: 300px;
+            height: 80px;
+        }
+
+        .no-float {
+            background: #fc543d;
+        }
+
+        .float {
+            float: left;
+            background: #0f296e;
+        }
+
+/*        .box {
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: #333;
+            font: 24px/100px 'Microsoft JhengHei UI';
+            text-align: center;
+            color: #fff;
+        }
+
+        .clearfix::after {
+            display: block;
+            content: '';
+            clear: both;
+        }*/
+    </style>
+</head>
+<body class="clearfix">
+<div class="float">
+    left float
+</div>
+<div class="no-float">
+    no float
+</div>
+
+<!--<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>-->
+
+</body>
+</html>

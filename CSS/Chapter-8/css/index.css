@@ -1,0 +1,642 @@
+/**
+ * 样式重置
+ */
+
+body, p, h2, h3, h4, h5, header, nav, section {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Microsoft YaHei UI", sans-serif;
+}
+
+.container {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+/**
+ * 头部
+ */
+
+/* 顶部 bar */
+
+.top-bar {
+    position: relative;
+    height: 32px;
+    border-bottom: 1px solid #eee;
+}
+
+.channel, .user-bar {
+    position: absolute;
+    font-size: 0;
+}
+
+.channel li, .user-bar li {
+    display: inline-block;
+    margin-right: 22px;
+}
+
+.channel li:last-child {
+    margin-right: 33px;
+}
+
+.channel a, .user-bar a {
+    text-decoration: underline;
+}
+
+.channel a, .channel strong, .user-bar a {
+    font: bold 13px/32px 'Microsoft YaHei UI';
+    color: #333;
+}
+
+.channel strong {
+    color: #666;
+}
+
+.user-bar a {
+    font-weight: normal;
+}
+
+.channel {
+    right: 229px;
+}
+
+.user-bar {
+    right: 0;
+}
+
+.to-index::before {
+    content: ' ';
+    width: 1px;
+    height: 13px;
+    background: #eee;
+    position: absolute;
+    top: 9px;
+    left: -22px;
+}
+
+.shop-entrance {
+    position: relative;
+}
+
+.lucky-try {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background: red;
+    top: 5px;
+    right: -5px;
+}
+
+/* 搜索框 */
+.search-box {
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0;
+}
+
+.logo {
+    display: inline-block;
+    width: 135px;
+    height: 45px;
+    background: url(../images/common.png) no-repeat -138px -5134px;
+    margin-right: 20px;
+    vertical-align: bottom;
+}
+
+.search-form {
+    display: inline-block;
+}
+
+.search-input {
+    width: 534px;
+    height: 40px;
+    font: 16px/40px 'Microsoft JhengHei UI';
+    border: 1px solid #b8b8b8;
+    border-right: none;
+    text-indent: 8px;
+}
+
+.search-input:focus {
+    border: 1px solid #2e82ff;
+}
+
+.search-btn, .ask-btn {
+    display: inline-block;
+    width: 100px;
+    height: 38px;
+    font: 16px/38px 'Microsoft YaHei UI';
+    text-align: center;
+    border: 1px solid #2e82ff;
+}
+
+/* input[type=submit] 的 border 包含在 width、height 属性内 */
+.search-btn {
+    width: 102px;
+    height: 40px;
+    color: #fff;
+    background: #2e82ff;
+    cursor: pointer;
+}
+
+.ask-btn {
+    color: #2e82ff;
+    margin-left: 4px;
+}
+
+/**
+ * 导航条
+ */
+
+nav {
+    background: url(../images/menu-bg.png) repeat-x;
+}
+
+.left-menu li, .right-menu li {
+    display: inline-block;
+}
+
+.left-menu {
+    float: left;
+}
+
+.right-menu {
+    float: right;
+}
+
+.left-menu a, .right-menu a {
+    display: block;
+    height: 40px;
+    font: 18px/40px 'Microsoft YaHei UI';
+    text-align: center;
+    color: #fff;
+}
+
+.left-menu, .right-menu {
+    font-size: 0;
+}
+
+.left-menu a {
+    width: 187px;
+    border-right: 1px solid #09a800;
+}
+
+.left-menu a:hover {
+    background: #36ca61;
+}
+
+.left-menu li:first-child a {
+    width: 117px;
+}
+
+.left-menu .active a {
+    color: #faff64;
+}
+
+.right-menu {
+    width: 210px;
+}
+
+.right-menu a {
+    font-size: 16px;
+}
+
+.right-menu li:first-child {
+    margin-right: 30px;
+}
+
+.zhidao-app .item-icon, .user-center .item-icon {
+    display: inline-block;
+    background: url(../images/common.png) no-repeat;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.zhidao-app .item-icon {
+    width: 10px;
+    height: 17px;
+    background-position: -265px -5600px;
+}
+
+.user-center .item-icon {
+    width: 16px;
+    height: 16px;
+    background-position: -259px -5620px;
+}
+
+.zhidao-app .item-name, .user-center .item-name {
+    vertical-align: middle;
+}
+
+/**
+ * banner
+ */
+
+.collection-item-pic {
+    width: 69px;
+    height: 69px;
+}
+
+.banner-wrap {
+    background: #b2d5f3;
+}
+
+.banner {
+    background: url(../images/top.jpg) no-repeat center;
+    height: 400px;
+    position: relative;
+}
+
+.iknow-daily-date, .banner-daily-info, .iknow-daily-collection {
+    position: absolute;
+}
+
+.iknow-daily-date {
+    top: 20px;
+    left: 3px;
+    font: 18px/20px 'Microsoft YaHei UI';
+    text-shadow: 1px 1px 1px rgba(11,2,5,.65);
+    color: #fff;
+}
+
+.banner-daily-info {
+    top: 220px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px;
+}
+
+.banner-daily-info a {
+    display: block;
+}
+
+.banner-daily-info .banner-title {
+    font: 30px/32px 'Microsoft YaHei UI';
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.banner-daily-info .banner-author {
+    font: 12px/14px 'Microsoft YaHei UI';
+    color: #bbc8d3;
+}
+
+.iknow-daily-collection {
+    top: 297px;
+}
+
+.daily-collection-list, .more-daily {
+    float: left;
+}
+
+.daily-collection-list .daily-collection-item {
+    float: left;
+    width: 220px;
+    height: 69px;
+    padding: 7px;
+    margin-right: 6px;
+    background: #fff;
+    font-size: 0;
+}
+
+.collection-item-link {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.collection-item-title {
+    display: inline-block;
+    width: 136px;
+    height: 72px;
+    padding-left: 14px;
+}
+
+.collection-item-title a {
+    font: 16px/24px 'Microsoft YaHei UI';
+    color: #353535;
+}
+
+.collection-item-title a:hover {
+    color: #36ca61;
+}
+
+.more-daily {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url(../images/module.png) no-repeat -234px -8px;
+    margin: 24px 15px;
+}
+
+.more-daily:hover {
+    background: url(../images/module.png) no-repeat -234px -47px;
+}
+
+.slogan-wrap {
+    width: 270px;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    background: #fff;
+}
+
+.slogan-header {
+    margin: 0 20px;
+    padding: 24px 0 12px;
+}
+
+.slogan-header .title {
+    font: bold 16px/18px 'Microsoft YaHei UI';
+    color: #353535;
+    float: left;
+}
+
+.slogan-header .iknow-need-know {
+    float: right;
+    width: 14px;
+    height: 14px;
+    background: url(../images/module.png) no-repeat -256px -1912px;
+    margin-top: 2px;
+}
+
+.slogan-divide-line {
+    height: 1px;
+    background: url(../images/module_x.png) repeat-x;
+    margin: 0 20px;
+}
+
+.middle-content {
+    margin: 39px 18px 37px 17px;
+}
+
+.slogan-content .text {
+    font: 24px/38px 'Microsoft YaHei UI';
+    color: #35b558;
+    width: 172px;
+    float: left;
+    padding-top: 4px;
+}
+
+.slogan-content .slogan-bg {
+    float: left;
+    width: 60px;
+    height: 80px;
+    background: url(../images/module.png) no-repeat -210px -2058px;
+}
+
+.slogan-content .count {
+    text-align: center;
+    font: 14px/30px 'Microsoft YaHei UI';
+    color: #353535;
+}
+
+.slogan-content .count span {
+    font: 30px/30px 'Microsoft YaHei UI';
+    color: #ee5e0f;
+    vertical-align: middle;
+}
+
+.slogan-content .iknow-need-know {
+    display: block;
+    text-align: center;
+    font: 12px/24px 'Microsoft YaHei UI';
+    color: #353535;
+    text-decoration: underline;
+    padding: 10px 0 30px;
+}
+
+.answer-question {
+    height: 60px;
+    background: #4aca6d;
+    font-size: 0;
+}
+
+.question-btn, .answer-btn {
+    display: inline-block;
+    width: 50%;
+    font: 16px/60px 'Microsoft YaHei UI';
+    color: #fff;
+    text-align: center;
+}
+
+.question-btn:hover, .answer-btn:hover {
+    background: #35b558;
+}
+
+.question-btn .item-title, .answer-btn .item-title {
+    vertical-align: middle;
+}
+
+.question-btn-logo, .answer-btn-logo {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(../images/module.png) no-repeat;
+    vertical-align: middle;
+}
+
+.question-btn-logo {
+    background-position: -252px -2141px;
+}
+
+.answer-btn-logo {
+    background-position: -252px -2162px;
+}
+
+/**
+ * 三部分
+ */
+
+/* 第一部分 */
+.hotspot-pic img {
+    width: 350px;
+    height: 246px;
+}
+
+.three-parts {
+    padding: 50px 0;
+}
+
+.hotspot-wrap {
+    width: 350px;
+    padding: 9px 13px 0;
+    background: #f8f8f8;
+    float: left;
+}
+
+.hotspot-tit {
+    margin-bottom: 10px;
+}
+
+.hotspot-pic {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.hotspot-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hotspot-text a {
+    line-height: 38px;
+    color: #fff;
+}
+
+.hotspot-text a:hover {
+    text-decoration: underline;
+}
+
+.hotspot-list-item a {
+    line-height: 32px;
+    color: #585858;
+}
+
+.hotspot-list-item a:hover {
+    color: #35b558;
+}
+
+.hotspot-list-item .hotspot-disc {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: url(../images/module.png) no-repeat -265px -347px;
+    margin: 0 7px 0;
+    vertical-align: middle;
+}
+
+/* 中间部分 */
+.focus-top img {
+    width: 120px;
+    height: 120px;
+}
+
+.focus-wrap {
+    float: left;
+    width: 425px;
+    margin-left: 40px;
+}
+
+.focus-tit {
+    margin: 8px 0 11px;
+}
+
+.focus-top {
+    margin-bottom: 20px;
+}
+
+.focus-top .content {
+    float: right;
+    width: 290px;
+}
+
+.focus-top h3 {
+    margin-bottom: 5px;
+}
+
+.focus-top h3 a {
+    font: 18px/26px 'Microsoft YaHei UI';
+    color: #000;
+}
+
+.focus-top h3 a:hover {
+    text-decoration: underline;
+}
+
+.focus-top .content .text {
+    font: 13px/20px 'Microsoft YaHei UI';
+    color: #8b8b8b;
+}
+
+.focus-list-item a {
+    line-height: 36px;
+    color: #585858;
+}
+
+.focus-list-item a:hover {
+    color: #35b558;
+}
+
+.focus-list-item .focus-disc {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: url(../images/module.png) no-repeat -265px -347px;
+    margin: 0 7px 0 0;
+    vertical-align: middle;
+}
+
+/* 第三部分 */
+
+.announcement-wrap {
+    float: right;
+    width: 280px;
+}
+
+.announcement-tit {
+    font: 18px/20px 'Microsoft YaHei UI';
+    color: #000;
+    margin-bottom: 14px;
+}
+
+.announcement-list {
+    margin-bottom: 20px;
+}
+
+.announcement-list-item a {
+    line-height: 32px;
+    color: #585858;
+}
+
+.announcement-item a:hover {
+    color: #35b558;
+}
+
+.announcement-list-item .announcement-disc {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: url(../images/module.png) no-repeat -265px -347px;
+    margin: 0 7px 0 0;
+    vertical-align: middle;
+}
+
+.announcement-new {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background: url(../images/common.png) no-repeat -254px -404px;
+    vertical-align: middle;
+}

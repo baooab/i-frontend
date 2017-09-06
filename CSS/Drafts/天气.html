@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background: #ebeff7;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 640px;
+            margin: 0 auto;
+        }
+
+        th, td {
+            padding: 0;
+            border: 1px solid #99b0da;
+        }
+
+        th {
+            font: bold 14px/30px 'Microsoft JhengHei UI';
+            background: #dbe3fa;
+        }
+
+        td {
+            text-align: center;
+            font: 12px/28px 'Microsoft JhengHei UI';
+            background: #fff;
+        }
+
+        .bg {
+            background: #f4f7fc;
+        }
+
+        .hot {
+            color: #fc543d;
+        }
+
+        .cold {
+            color: #0f296e;
+        }
+
+        .weather {
+            display: block;
+            width: 32px;
+            height: 32px;
+            margin: auto;
+            background: url(http://tianqi.2345.com/theme2/images/w_day.png) no-repeat;
+        }
+
+        .sun {
+            background-position: 0 -64px;
+        }
+
+        .night {
+            background-position: -40px -32px;
+        }
+
+        .space td {
+            height: 4px;
+            border: none;
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">日期</th>
+                <th colspan="2">天气现象</th>
+                <th>气温</th>
+                <th>风向</th>
+                <th>风力</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2" class="bg">22日星期五</td>
+                <td class="bg">白天</td>
+                <td><span class="weather sun"></span></td>
+                <td>晴转多云</td>
+                <td class="hot">高温7℃</td>
+                <td>无持续风向</td>
+                <td>微风</td>
+            </tr>
+            <tr>
+                <td class="bg">夜间</td>
+                <td><span class="weather night"></span></td>
+                <td>雪</td>
+                <td class="cold">低温-4℃</td>
+                <td>无持续风向</td>
+                <td>微风</td>
+            </tr>
+            <tr class="space">
+                <td colspan="7"></td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="bg">23日星期六</td>
+                <td class="bg">白天</td>
+                <td><span class="weather sun"></span></td>
+                <td>晴转多云</td>
+                <td class="hot">高温7℃</td>
+                <td>无持续风向</td>
+                <td>微风</td>
+            </tr>
+            <tr>
+                <td class="bg">夜间</td>
+                <td><span class="weather night"></span></td>
+                <td>雪</td>
+                <td class="cold">低温-4℃</td>
+                <td>无持续风向</td>
+                <td>微风</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
